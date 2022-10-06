@@ -1,0 +1,17 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/student</property>
+        <property name="connection.username">admin</property>
+        <property name="connection.password">12345</property>
+
+        <property name="connection.pool_size">1</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+        <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="ru.hibernate.Student"></mapping>
+    </session-factory>
+
+</hibernate-configuration>
